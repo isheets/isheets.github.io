@@ -2,7 +2,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let projectThumbs = document.getElementsByClassName('project-thumb');
 
     for (let thumb of projectThumbs) {
-        //thumb.addEventListener('keydown', openProjectContent);
         thumb.addEventListener('click', openProjectContent);
     }
 });
@@ -49,12 +48,15 @@ var openProjectContent = (e) => {
         case "finals-countdown":
             contentToRender = finalsCountdownContent;
             break;
+        case "complete-a-tweet-2000":
+            contentToRender = completeATweetContent;
+            break;
         default:
+            console.error("Unknown project selected.")
             break;
     }
 
     //render the content in lightbox if we have it
-    //TODO: need to add callback function for on close to return focus to closed link
     if (contentToRender !== null) {
         SimpleLightbox.open({
             content: contentToRender,
@@ -62,12 +64,12 @@ var openProjectContent = (e) => {
             beforeClose: () => {returnFocus(projectLink)}
         });
 
+        //lightbox accesibility considerations (trapping and transferring focus)
         let projectTitle = document.getElementsByClassName('project-title')[0];
         let modal = document.getElementsByClassName("slbContentEl")[0];
         modal.setAttribute("aria-modal", "true");
         modal.setAttribute("aria-labeledby", projectTitle.id);
         trapFocus(modal);
-        projectTitle.focus();
 
         //add label to close button for screenreader
         let closeButton = document.getElementsByClassName("slbCloseBtn")[0];
@@ -86,7 +88,7 @@ var returnFocus = (prevActive) => {
 //used to trap focus to light box when open
 var trapFocus = (element, namespace) => {
     var focusableEls = element.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])'),
-        firstFocusableEl = focusableEls[0];
+    firstFocusableEl = focusableEls[0];
     lastFocusableEl = focusableEls[focusableEls.length - 1];
     KEYCODE_TAB = 9;
 
