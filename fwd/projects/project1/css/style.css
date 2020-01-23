@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans:400,700');
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow-x: hidden;
+
+} 
+
+/*
+green: #00A676
+dust: #C0BCB5
+blue: #B1DDF1
+red: #BF4342
+old lavender: #6D6875
+*/
+
+body {
+
+}
+
+
+.badText {
+	color: white;
+
+}
+
+.goodText {
+	color: white;
+}
+.green {
+	color: #00A676;
+}
+
+.dust {
+	color: #C0BCB5;
+}
+
+.blue {
+	color: #00CAE5;
+}
+
+.red {
+	color: #9B1D20;
+}
+
+.grey {
+	color: #6D6875;
+}
+
+#head {
+	background-color: #9E9A95;
+}
+
+#title {
+	position: relative;
+}
+
+#tagline {
+	position: relative;
+}
+
+h1 {
+	text-align: center;
+	margin: auto;
+	display: block;
+	padding-top: 15%;
+	font-family: 'Fredoka One', sans-serif;
+	font-size: 250%;
+}
+
+#head > h2 {
+	text-align: center;
+	margin: auto;
+	display: block;
+	padding-top: 10%;
+	font-family: 'Fredoka One', sans-serif;
+	font-size: 210%;
+	width: 60%;
+	letter-spacing: 1.5px;
+}
+h2.badText{
+	letter-spacing: 1.5px;
+	margin: auto;
+	width: 45%;
+	display: block;
+	z-index: 1;
+	padding-top: 100px;
+	font-family: 'Fredoka One', sans-serif;
+	font-size: 180%;
+	position: relative;
+}
+h2.goodText{
+	letter-spacing: 1.5px;
+	margin: auto;
+	width: 45%;
+	display: block;
+	z-index: 1;
+	padding-top: 100px;
+	font-family: 'Fredoka One', sans-serif;
+	font-size: 180%;
+	position: relative;
+}
+
+p {
+	position: relative;
+	margin: auto;
+	width: 45%;
+	display: block;
+	z-index: 0;
+	padding-top: 40px;
+	font-size: 115%;
+	font-family: 'Open Sans', sans-serif;
+}
+.narrow {
+	width: 30%;
+
+}
+.list {
+	letter-spacing: 1px;
+	 display: block;
+	 width: auto;
+	 font-family: 'Fredoka One', sans-serif;
+}
+
+h2.goodText.lowPad {
+	padding-top: 10px;
+}
+
+
+
+.right {
+	text-align: right;
+}
+
+#bg1 {
+	z-index: 2;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	
+}
+
+#carBG {
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url('../img/car.svg') repeat-x left bottom, 
+	url('../img/cloud1.svg') repeat-x top right, 
+	url('../img/cloud.svg') repeat-x top left, 
+	url('../img/city.svg') no-repeat bottom left, 
+	url('../img/city1.svg') no-repeat bottom right;
+	background-size: 5%, 30%, 25%, 22%, 22%;
+	animation: animatedBackground 40s linear infinite;
+	z-index: 2;
+}
+
+
+#bg2 {
+	z-index: 2;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+}
+
+#theBad {
+	height: 3800px;
+	padding-bottom: 500px;
+	background-color: #6D6875;
+}
+
+#theGood {
+	position: relative;
+	height: 3100px;
+	background-color: #00CAE5;
+	z-index: 11;
+}
+
+#sunnyBG {
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: 
+	url('../img/happyCloud.svg') repeat-x top left,
+	url('../img/sun.svg') no-repeat top right,
+	url('../img/happyCloud.svg') repeat-x top right,
+	url('../img/hills.svg') no-repeat bottom center;
+	background-size: 40%, 10%, 20%, 100%;
+	animation: animatedHappyBackground 40s linear infinite;
+	z-index: 10;
+}
+
+#big {
+	letter-spacing: 1.5px;
+	margin: auto;
+	width: 45%;
+	display: block;
+	z-index: 1;
+	padding-top: 300px;
+	font-family: 'Fredoka One', sans-serif;
+	font-size: 250%;
+	position: relative;
+	text-align: center;
+}
+
+@keyframes animatedBackground {
+	from { background-position: 
+		left bottom, 
+		right top, 
+		left top, 
+		left bottom, 
+		right bottom; }
+	to { background-position: 
+		center bottom, 
+		left top, 
+		center top, 
+		left bottom, 
+		right bottom; }
+}
+
+@keyframes animatedHappyBackground {
+	from { background-position: 
+		top left, 
+		top right,
+		top right,
+		bottom right; }
+	to { background-position: 
+		top right, 
+		top right,
+		top center,
+		bottom right; }
+}

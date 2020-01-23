@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Front End Web Dev Class Portal</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class = "container">
+		<div class = "menu">
+			<header class = "title">
+				<h1><a href="index.html">Front End Web Dev</a></h1>
+			</header>
+			<nav class="pages">
+				<ul>
+					<li class="n2"><a href="projects.html">projects</a></li>
+					<li class="n3"><a href="labs.html">labs</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<main>
+			<h2>PROJECTS</h2>
+			<div class = "proj-grid">
+				<section id="project01" class = "grid-item">
+					<h3>project 1</h3>
+					<p class="description">Project 1 is an interactive narrative. I chose to create mine on the subject of driving. I personally do not like being in a car ever, and I have found that using alternative forms of transportation has made my life easier and generally better. The content of my narrative is a mix of factual information and anecdotal experience. In terms of user interactivity, my argument is a single page with elements and backgrounds changing as the user scrolls. I used a library called ScrollMagic with a plugin called GreenSock Animation Platform to handle the animations and scrolling.</p>
+					<a href="projects/project1/index.html">enough talk, give it a try</a>
+				</section>
+				<section id="project02" class = "grid-item">
+					<h3>project 2</h3>
+					<p class="description">For project 2 I used APIs to add on to my content from the first project. I wanted to create a tool that enabled the user to visualize of how long it would take them to get places they usually drive to, so I used an API called Targomo to request some iso-time polygons for walking, biking, or using public transportation based on a user inputted address. I used Google Places API for address autocomplete as well as geocoding. I also made slight modifications to the content from my first project to create a slightly more balanced arguement. Additionally, I included a navigation at the top so the user can go straight to the mapping tool or read the content first.</p>
+					<a href="projects/project2/index.html">take a look</a>
+				</section>
+				<section id="project03" class = "grid-item">
+					<h3>project 3</h3>
+					<p class="description">For project 3, I worked in a three person group to create an app in React called The Finals Countdown. The app allows the user to enter when their finals are and add todo items to each class. We used firebase for data persistence.</p>
+					<a href="projects/project3/milestone3/index.html">view the app</a>
+					<p>
+						Sources:
+						<a href="projects/project3/milestone3/source/App.js">App.js</a>, 
+						<a href="projects/project3/milestone3/source/ClassItem.js">ClassItem.js</a>, 
+						<a href="projects/project3/milestone3/source/NewClassForm.js">NewClassForm.js</a>, 
+						<a href="projects/project3/milestone3/source/Timer.js">Timer.js</a>, 
+						<a href="projects/project3/milestone3/source/TodoItem.js">TodoItem.js</a>, 
+						<a href="projects/project3/milestone3/source/TodoList.js">TodoList.js</a>.
+					</p>
+				</section>
+				<section id="midterm01" class = "grid-item">
+					<h3>mid-term 1</h3>
+					<a href="midterm/index.html">this is my midterm</a>
+				</section>
+				<section id="midterm01" class = "grid-item">
+					<h3>final</h3>
+					<a href="final/index.html">this is my final</a>
+				</section>
+			</div>
+		</main>
+	</div>
+</body>
+</html>
+
+<!-- colors: 
+#CEE5F2 - lightest
+#ACCBE1
+#7C98B3
+#637081
+#536B78 - darkest-->

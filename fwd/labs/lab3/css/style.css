@@ -1,0 +1,22 @@
+ol {
+	list-style-type: none;
+	display: inline-block;
+}
+li {
+	display: inline-block;
+	font-size: 150%;
+	padding: 10px;
+
+}
+
+.hidden{
+	display: none;
+}
+
+.highlight {
+	background: yellow;
+}
+
+#content {
+	position: absolute;
+}

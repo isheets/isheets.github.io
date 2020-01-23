@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=K2D:400,500,700|Open+Sans');
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+} 
+body {
+	width: 100%;
+	background-color: #DDDCD9;
+}
+#head {
+	padding-top: 20px;
+}
+h1 {
+	margin: auto;
+	text-align: center;
+	font-family: 'K2D', sans-serif;
+	font-weight: 700;
+}
+h2{
+	font-family: 'K2D', sans-serif;
+	font-weight: 500;
+}
+p {
+	font-family: 'Open Sans', sans-serif;
+}
+#tagLine {
+	padding-top: 30px;
+	margin: auto;
+	text-align: center;
+}
+
+.navGrid {
+	padding-top: 20px;
+	margin: auto;
+	width: 70%;
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-column-gap: 10px;
+	justify-content: center;
+}
+
+.navItem {
+	display: inline;
+	justify-self: center;
+	font-family: 'K2D', sans-serif;
+}
+
+a {
+	font-size: 150%;
+	text-decoration: none;
+	color: #536B78;;
+}
+
+a:visited {
+	color: #536B78;
+}
+
+a:hover {
+	background-color: #536B78;
+	color: #CEE5F2;	
+}
+
+a:active {
+	background-color: #536B78;
+	color: #CEE5F2;
+}
+
+.mainImage {
+	padding-top: 30px;
+	display: block;
+	margin: auto;
+}
+
+#safetyText {
+	width: 70%;
+	margin: auto;
+}
+
+.safeHead {
+	text-align: center;
+	padding-top: 10px;
+}
+#iconGrid {
+	padding-top: 30px;
+	margin: auto;
+	width: 70%;
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	grid-column-gap: 10px;
+	justify-content: center;
+}
+
+.iconItem {
+	justify-self: center;
+}
+
+.iconItem:hover {
+	background-color: #536B78;
+
+}
+
+.content {
+	padding-top: 20px;
+	margin: auto;
+	width: 80%;
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-column-gap: 20px;
+}
+
+@media only screen and (max-width: 1100px) {
+
+	.content {
+		width: 100%;
+		justify-content: center;
+		grid-template-columns: 100%;
+		grid-row-gap: 15px;
+	}
+}

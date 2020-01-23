@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:500|Teko:500|Overpass+Mono:600');
+
+/*css reset*/
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+} 
+
+:root {
+	--blue: #11929E;
+	--yellow: #FFF9B1;
+	--green: #9AB285;
+	--pink: #FFB896;
+	--brown: #B2A589;
+	--grey: #212628;
+	--lt: rgba(217, 210, 196, 1);
+}
+
+body {
+	/* background-image: url(../img/bg.svg);
+	background-size: 125px; */
+	background-color: #B2A589;
+	width: 95%;
+	margin: auto;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 350px 1fr;
+	grid-template-rows: min-content min-content 1fr;
+}
+
+section {	
+	margin: 10px;
+	padding: 10px;
+	/* outline: solid 2px white; */
+}
+
+
+/* lightbox container */
+.slbContentOuter {
+	max-width: 80%;
+	margin: auto;
+}
+
+.slbContent {
+	padding: 5%;
+	border: 3px solid var(--pink);
+	background-color: var(--lt) !important;
+}
+
+.project-item {
+}
+
+.project-grid {
+	display: grid;
+	max-width: 100%;
+	grid-template-columns: 66% 34%;
+}
+
+#links {
+	display:flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+
+#about {
+	grid-column: 1/3;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-top: solid 5px #FFB896;
+	margin: 20px;
+	margin-bottom: 10px;
+}
+
+#projects {
+
+}
+
+.project-bullet-grid {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+.github-links {
+	text-align: right;
+}
+
+#app-links * {
+	display: inline-block;
+}
+
+.project-overview {
+	margin-bottom: 20px;
+}
+
+.project-description {
+	margin-bottom: 20px;
+}
+
+.picture-grid {
+	max-width: 100%;
+	display: flex;
+	margin-top: 0;
+}
+
+
+.app-pic {
+	object-fit: contain;
+	max-width: 80%;
+	max-height: 100%;
+	margin: auto;
+	margin-top: 0;
+} 
+
+h1 {
+	font-size: 250%;
+	font-family: 'Teko', sans-serif;
+	letter-spacing: 1px;
+	color: #212628;
+	line-height: 100%;
+}
+
+h2 {
+	font-size: 200%;
+	font-family: 'Teko', sans-serif;
+	letter-spacing: 1px;
+	color: #212628;
+}
+
+h3 {
+	font-size: 150%;
+	font-family: 'Teko', sans-serif;
+	letter-spacing: 1px;
+	color: #212628;
+}
+
+h4 {
+	font-size: 115%;
+	font-family: 'Teko', sans-serif;
+	letter-spacing: 1px;
+	color: #212628;
+}
+
+p {
+	font-family: 'Raleway', sans-serif;
+	color: #212628;
+	line-height: 150%;
+	margin-bottom: 5px;
+}
+
+ul {
+	list-style-type: square;
+	list-style-position: inside;
+	font-family: Open Sans, sans-serif;
+	width: 100%;
+	height: 100%;
+
+}
+
+#projects {
+	grid-column: 1/3;
+	border: 2px solid var(--pink);
+	margin: 20px;
+}
+
+#project-list {
+	width: 100%;
+	list-style: none;
+	display: grid;
+	grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+.project-thumb {
+	cursor: pointer;
+	border: 2px solid var(--yellow);
+	margin: 5px;
+	margin-bottom: 20px;
+	padding: 10px;
+	transition: all .4s ease-out;
+	background-color: var(--lt);
+}
+
+.project-thumb:hover {
+	background-color: var(--grey);
+	border: 2px solid var(--pink);
+}
+
+.project-thumb:hover > p {
+	color: white;
+}
+
+.project-thumb:hover > a {
+	color: white;
+	background-color: var(--grey);
+}
+
+.thumbnail-title {
+	position: relative;
+	top: -20px;
+}
+
+a {
+	font-size: 110%;
+	font-family: Overpass Mono, monospace;
+	text-decoration: none;
+	color: #212628;
+	background-color: #FFF9B1;
+	padding:5px;
+	transition: color .4s ease-out, background-color .4s ease-out;
+}
+
+/* mouse over link */
+a:hover {
+	color: white;
+	background-color: var(--grey);
+}
+
+/* selected link */
+a:active {
+	color: #FFF9B1;
+	background: none;
+}
+
+*:focus {
+	outline: none;
+	border: 2px dashed var(--blue);
+}
+
+.top-link {
+	text-align: right;
+	font-size: 110%;
+	font-family: 'Overpass Mono', monospace;
+	color: #212628;
+	display: inline-block;
+	width: 100%;
+	padding: 3px;
+	margin: 1px;
+	letter-spacing: 1px;
+}
+
+#project-list-title {
+
+	margin-left: 5px;
+	margin-bottom: 10px;
+}
+
+/*responsive app*/
+@media only screen and (max-width: 1150px) {
+	.project-grid {
+		display: flex;
+		flex-direction: column;
+	}	
+	.picture-grid {
+		
+		max-width: 50%;
+		margin: auto;
+		margin-top: 10px;
+	}
+}
+
+@media only screen and (max-width: 830px) {
+	body{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	section {
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	#about {
+		margin-top: 10px;
+	}
+
+	.top-link {
+		text-align: left;
+	}
+
+	#logo {
+		margin-top: 10px;
+		max-width: 50%;
+	}
+
+	#project-list {
+		grid-template-columns: 50% 50%;
+	}
+
+	.slbContentOuter {
+		max-width: 90%;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.slbContentOuter {
+		max-width: 95%;
+	}
+	#project-list {
+		grid-template-columns: 100%;
+	}
+}

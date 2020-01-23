@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Front End Web Dev Class Portal</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class = "container">
+		<div class = "menu">
+			<header class = "title">
+				<h1><a href="index.html">Front End Web Dev</a></h1>
+			</header>
+			<nav class="pages">
+				<ul>
+					<li class="n2"><a href="projects.html">projects</a></li>
+					<li class="n3"><a href="labs.html">labs</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<main>
+			<h2>LABS</h2>
+
+			<div class = "lab-grid">
+				<section id="lab01" class="grid-item">
+					<h3>lab 1</h3>
+					<p class="description">Lab 1 is a quick and dirty refresher on JavaScript DOM manipulation. My implemenation changes both color (CSS) and content (innerHTML) of some text depending on various user interactions.</p>
+					<a href="labs/lab1/index.html">check it out</a>
+				</section>
+				<section id="lab02" class = "grid-item">
+					<h3>lab 2</h3>
+					<p class = "description">Lab 2 is an exploration of JavaScript debugging. I was given a three question quiz that had both syntax and logic errors, which caused the quiz to not function at all. Using chrome developer tools, I detected and corrected each error until all the issues were fixed and the quiz ran correctly.</p>
+					<a href="labs/lab2/debug_js.html">working version</a>
+					<a href="http://creative.colorado.edu/~apierce/samples/debug_js.html">orginal non-working version</a>
+				</section>
+				<section id="lab03" class = "grid-item">
+					<h3>lab 3</h3>
+					<p class = "description">Lab 3 is an exercise in jQuery. The task was to create a basic webpage that uses jQuery to select, filter, and manipulate elements on the page in at least three ways. I chose to explore using element tags and IDs to select, and odd/even filter. I manipulated text in a div and toggled classes for elements via jQuery. I animated the "top" attribute of my container div to move everything down the page on button press. </p>
+					<a href="labs/lab3/index.html">give it a try</a>
+				</section>
+				<section id="lab04" class = "grid-item">
+					<h3>lab 4</h3>
+					<p class = "description">Lab 4 is an intrduction to APIs and JSON data. My webpage uses three APIs: Targomo, Google Geocoding, and Open Weather. The user enters their address and they can see how far they can get in 10, 20, or 30 minutes using one of three transporation options. The page also gets the weather and displays it so that the user can make an informed choice about the transportation method they choose</p>
+					<a href="labs/lab4/index.html">here it is</a>
+				</section>
+
+				<section id="lab05" class = "grid-item">
+					<h3>lab 5</h3>
+					<p class = "description">Lab 5 utilizes firebase to write and read JSON objects to and from the cloud. I created a simple true/false quiz with halloween trivia. My firebase implementation entails a database designed in the firebase console which I use to store and display recent scores from all users who take my quiz.</p>
+					<a href="labs/lab5/index.html">take the quiz</a>
+				</section>
+
+				<section id="lab06" class = "grid-item">
+					<h3>lab 6</h3>
+					<p class = "description">Lab 6 is an application of the React framework. I used react to create a simple todo list app with 2 components and the ability to add, check, and delte todo items.</p>
+					<a href="labs/lab6/index.html">react todo list</a>
+				</section>
+
+			</div>
+		</main>
+	</div>
+</body>
+</html>
+
+<!-- colors: 
+#CEE5F2 - lightest
+#ACCBE1
+#7C98B3
+#637081
+#536B78 - darkest-->

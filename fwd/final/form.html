@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Final</title>
+	<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+	<script>
+   var config = {
+    apiKey: "AIzaSyCZWembxrdrJ9LlGsaUhKjUzH22-AYdOGk",
+    authDomain: "mad-final-630d0.firebaseapp.com",
+    databaseURL: "https://mad-final-630d0.firebaseio.com",
+    projectId: "mad-final-630d0",
+    storageBucket: "mad-final-630d0.appspot.com",
+    messagingSenderId: "776517323922"
+  };
+  firebase.initializeApp(config);
+
+</script>
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous">
+</script>
+<script src="script.js" defer></script>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<main>
+    <h1>Report a Wildfire</h1>
+
+    <div id="nav">
+      <span class="navitem">
+        <a href="index.html">Home</a>
+      </span>
+      <span class="navitem">
+        <a href="form.html">Report</a>
+      </span>
+      <span class="navitem">
+        <a href="incidents.html">Incidents</a>
+      </span>
+      <span class="navitem">
+        <a href="data.html">Information</a>
+      </span>
+    </div>
+
+    <div id="form">
+    <h3>Report a Wildfire Sighting</h3>
+    
+      <form id="order_form" method="post" action="">
+
+        <p>
+          <label for="name" class="label">Name</label>
+          <input name="name" type="text" id="name" size="36" required >
+        </p>
+        <p>
+          <label for="email" class="label">Email</label>
+          <input name="email" id="email" type="email" size="36">
+        </p>
+        <p>
+          <label for="phone" class="label">Phone</label>
+          <input name="phone" type="text" id="phone" size="36">
+        </p>
+
+        <p>
+          Are people being affected?<br>
+          <input type="radio" name="caught" id="caught_yes" value="Yes">
+          <label for="caught_yes">Yes</label>
+          <br>
+          <input type="radio" name="caught" id="caught_no" value="No">
+          <label for="caught_no">No</label>
+        </p>
+        <p>
+          Are structures being affected?<br>
+          <input type="radio" name="trigger" id="trigger_yes" value="Yes">
+          <label for="trigger_yes">Yes</label>
+          <br>
+          <input type="radio" name="trigger" id="trigger_no" value="No">
+          <label for="trigger_no">No</label>
+        </p>
+        <p>
+          <label for="location" class="label">Location</label>
+          <input name="location" type="text" id="location" size="36">
+        </p>
+        <p>
+          <label for="description" class="label">Description</label><br>
+          <textarea id="description" rows="5" cols="30"></textarea>
+        </p>
+        <p>
+          <input type="submit" id="enter" value="Submit Sighting">
+        </p>
+      </form>
+  </div>
+  </main>
+</body>
+</html>

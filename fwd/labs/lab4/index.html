@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Lab 4</title>
+	<!--  Include jquery - required for XHR requests -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<!--  Include leaflet javascript and css -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" crossorigin="">
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js" crossorigin=""></script>
+	<!--  Include r360.js -->
+	<script src="https://releases.route360.net/r360-js/latest.js"></script>
+	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3Z7vz5WYLyBJ6MGB4Txzdp0359xbhXOM"></script>
+	<script src="script.js" defer></script>
+
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<main>
+		<section id="form">
+			<h1>Enter an address to see how far you can get without a car</h1>
+			<form id="userInput">
+				<span id="label">Address: </span>
+				<input type="text" name="address" id="address"><br>
+				<input type="radio" name="travelType" value="walk" checked> Walk<br>
+				<input type="radio" name="travelType" value="bike"> Bike<br>
+				<input type="radio" name="travelType" value="transit"> Public Transit<br>
+				<input type="button" value="show map" id="show">
+			</form>
+		</section>
+		
+		
+		<section id="map"></section>
+		
+
+		<section id="weather">
+			<!--  where the map will live  -->
+			<h2>Legend:</h2>
+			<p>green means you can get there in under 10 minutes</p>
+			<p>blue in under 20 min</p>
+			<p>red in under 30 min</p>
+			<h2>Current Weather:</h2>
+			<h3 id="temp">Current Temperature(F): </h3>
+			<h3 id="conditions">Conditions: </h3>
+		</section>
+	</main> 
+</body>
+</html>

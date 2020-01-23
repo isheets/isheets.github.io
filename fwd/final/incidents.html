@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Final</title>
+	<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+	<script>
+  		 var config = {
+    apiKey: "AIzaSyCZWembxrdrJ9LlGsaUhKjUzH22-AYdOGk",
+    authDomain: "mad-final-630d0.firebaseapp.com",
+    databaseURL: "https://mad-final-630d0.firebaseio.com",
+    projectId: "mad-final-630d0",
+    storageBucket: "mad-final-630d0.appspot.com",
+    messagingSenderId: "776517323922"
+  };
+  firebase.initializeApp(config);
+  		
+     </script>
+     <script
+     src="https://code.jquery.com/jquery-3.3.1.min.js"
+     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+     crossorigin="anonymous">
+     </script>
+     <script src="script.js" defer></script>
+     <link href="style.css" rel="stylesheet" type="text/css" />
+   </head>
+
+   <body>
+     <main>
+      <h1>Wildfire Sightings</h1>
+
+      <div id="nav">
+        <span class="navitem">
+          <a href="index.html">Home</a>
+        </span>
+        <span class="navitem">
+          <a href="form.html">Report</a>
+        </span>
+        <span class="navitem">
+          <a href="incidents.html">Incidents</a>
+        </span>
+        <span class="navitem">
+          <a href="data.html">Information</a>
+        </span>
+      </div>
+
+      <img src="images/wildfire2.jpg" alt="Wildfire">
+
+      <table class = "dataTable" id ="fireSight">
+        <tr class = "tableHead">
+          <th>Location</th>
+          <th>Structures Destroyed?</th> 
+          <th>Description</th>
+        </tr>
+      </table>
+    </table>
+  </main>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Lab 5</title>
+	<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+	<script>
+  		// Initialize Firebase
+  		var config = {
+  			apiKey: "AIzaSyAM9jr2eLBO9PVb5-JFVEolfmivkYmdk2Q",
+  			authDomain: "mad-lab-5.firebaseapp.com",
+  			databaseURL: "https://mad-lab-5.firebaseio.com",
+  			projectId: "mad-lab-5",
+  			storageBucket: "mad-lab-5.appspot.com",
+  			messagingSenderId: "300819046277"
+  		};
+  		firebase.initializeApp(config);
+  	</script>
+  	<script
+  	src="https://code.jquery.com/jquery-3.3.1.min.js"
+  	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  	crossorigin="anonymous">
+  </script>
+  <script src="script.js" defer></script>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<main>
+		<h1>A Spoooky Halloween Quiz!</h1>
+		<div id='container'>
+			<div id='col1'>
+			<h2>Take the quiz!</h2>
+			<div>
+				<label for="name" class="label">Name</label>
+				<input name="name" type="text" id="name" size="36">
+			</div>
+			<article class="q" id="quest1">
+				<p>The word "Halloween" is derived from a combination of "All Hallows Evening."</p>
+				<input type="radio" name="q1" id="true1" value="true">
+				<label for="true1">True</label><br>
+				<input type="radio" name="q1" id="false1" value="false">
+				<label for="false1">False</label>
+				<p class="a" id="a1">INCORRECT. The word actually comes from the Scottish term and abbreviation for "All Hallows' Eve."</p>
+			</article>
+			<article class="q" id="quest2">
+				<p>Halloween is the third most commercially successful holiday, coming behind Valentine's Day and Christmas.</p>
+				<input type="radio" name="q2" id="true2" value="true">
+				<label for="true2">True</label><br>
+				<input type="radio" name="q2" id="false2" value="false">
+				<label for="false2">False</label>
+				<p class="a" id="a2">INCORRECT. Halloween is actually the second most commercially successful holiday, with only Christmas coming before.</p>
+			</article>
+			<article class="q" id="quest3">
+				<p>Mexico's Halloween is called "El Dia De Los Muertos," or the "Day of the Dead." </p>
+				<input type="radio" name="q3" id="true3" value="true">
+				<label for="true3">True</label><br>
+				<input type="radio" name="q3" id="false3" value="false">
+				<label for="false3">False</label>
+				<p class="a" id="a3">INCORRECT. El Dia de los Muertos is actually celebrated on November 2nd and is its own cultural holiday that has little to no connection with Halloween. The simple skeleton motifs and the timing of El Dia de los Muertos have led some to mistake such celebrations and festivities for "Mexican Halloween."</p>
+			</article>
+			<article class="q" id="quest4">
+				<p>The first Jack O' Lanterns were made with turnips instead of pumpkins.</p>
+				<input type="radio" name="q4" id="true4" value="true">
+				<label for="true4">True</label><br>
+				<input type="radio" name="q4" id="false4" value="false">
+				<label for="false4">False</label>
+				<p class="a" id="a4">INCORRECT. The pumpkin, native to North America, was adopted due to the easier time people had carving it compared to the traditional turnip.</p>
+			</article>
+			<article class="q" id="quest5">
+				<p>The top day annually for candy sales is October 31st, right on Halloween.</p>
+				<input type="radio" name="q5" id="true5" value="true">
+				<label for="true5">True</label><br>
+				<input type="radio" name="q5" id="false5" value="false">
+				<label for="false5">False</label>
+				<p class="a" id="a5">INCORRECT. The top day is actually October 28th! However, the 27th, 30th, and 31st along with the 28th make up 4 of 5 of the top annual candy sales days, showing our last minute tendencies when it comes to stocking up for Halloween.</p>
+			</article>
+			<article>
+				<button type="button" id="check">Check Answers</button>
+			</article>
+			<article>
+				<h3 id="score"></h3>
+			</article>
+		</div>
+		<div id="col2">
+			<article id="leaderboard">
+				<h2>Recent Scores</h2>
+				<div id="scoreboard">
+				</div>
+			</article>
+		</div>
+		</div>
+	</main> 
+</body>
+</html
+
+<!-- quiz question source: https://shop.auroragift.com/blogs/aurora/halloween-trivia-facts -->
