@@ -192,16 +192,6 @@ ul {
 	background-color: var(--lt);
 }
 
-.featured {
-	grid-column: 1/4;
-	padding: 0;
-}
-
-.fill {
-	height: 0;
-	padding: 0;
-}
-
 .project-thumb:hover {
 	background-color: var(--grey);
 	border: 2px solid var(--pink);
