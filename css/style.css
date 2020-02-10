@@ -90,7 +90,7 @@ section {
 }
 
 #portrait {
-	border: 1px solid var(--grey);
+	border: 3px solid #fff;
 	object-fit: scale-down;
 	height: 200px;
 	margin-right: 15px;
