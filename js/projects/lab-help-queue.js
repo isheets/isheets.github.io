@@ -1,7 +1,7 @@
 let labHelpQueueContent = `
 <article id="lab-help-queue" class="project-item">
     <div class="splash-image-container">
-        <img src="./../../img/lab-help-queue.png" class="splash-image" alt="an example screenshot of the help queue in action">
+        <img src="./img/lab-help-queue.png" class="splash-image" alt="an example screenshot of the help queue in action">
     </div>
 
     <div class="project-overview">
