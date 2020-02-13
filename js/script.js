@@ -11,7 +11,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
     const linkEls = document.querySelectorAll(".top-link");
-    const projectEls = document.querySelectorAll('.project-thumb')
 
     introTL.add({
         targets: linkEls,
@@ -32,7 +31,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         scaleY: [0, 1],
         duration: 1000
     }, '-=400').add({
-        targets: projectEls,
+        targets: projectThumbs,
         duration: 50,
         scaleX: [0, 1],
         scaleY: [0, 1],
@@ -43,7 +42,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 //opens lightbox with content for requested project
 var openProjectContent = (e) => {
     alert('project clicked')
-    e.preventDefault();
+    //e.preventDefault();
     //determine which project was clicked on
     let projectClicked = null;
     let liElement = null;
