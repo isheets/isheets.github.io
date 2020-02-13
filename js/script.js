@@ -59,7 +59,7 @@ var openProjectContent = (e) => {
         liElement = e.srcElement;
     }
 
-
+    alert(projectClicked)
 
     let projectLink = liElement.getElementsByClassName('thumbnail-title')[0];
 
