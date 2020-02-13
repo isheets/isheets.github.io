@@ -42,7 +42,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 //opens lightbox with content for requested project
 var openProjectContent = (e) => {
-    //e.preventDefault();
+    alert('project clicked')
+    e.preventDefault();
     //determine which project was clicked on
     let projectClicked = null;
     let liElement = null;

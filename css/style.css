@@ -357,9 +357,12 @@ a:active {
 		grid-template-columns: 100%;
 	}
 	#portrait {
-		display: none;
+		/* display: none; */
+		width: 15%;
+		height: 15%;
+		object-fit: cover;
 	}
 	#about-content {
-		flex-direction: column;
+		/* flex-direction: column; */
 	}
 }
