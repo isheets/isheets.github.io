@@ -51,6 +51,9 @@ var openProjectContent = (e) => {
         case "complete-a-tweet-2000":
             contentToRender = completeATweetContent;
             break;
+        case "lab-help-queue":
+            contentToRender = labHelpQueueContent;
+            break;
         default:
             console.error("Unknown project selected.")
             break;

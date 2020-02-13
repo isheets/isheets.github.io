@@ -109,6 +109,18 @@ section {
 	display: inline-block;
 }
 
+.splash-image-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.splash-image {
+	object-fit: scale-down;
+	width: 60%;
+	border-radius: 5px;
+}
+
 .project-overview {
 	margin-bottom: 20px;
 }
