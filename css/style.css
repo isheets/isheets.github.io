@@ -356,4 +356,10 @@ a:active {
 	#project-list {
 		grid-template-columns: 100%;
 	}
+	#portrait {
+		display: none;
+	}
+	#about-content {
+		flex-direction: column;
+	}
 }
