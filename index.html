@@ -24,10 +24,13 @@
 	<script src="./js/projects/finals-countdown.js" defer></script>
 	<script src="./js/projects/complete-a-tweet-2000.js" defer></script>
 	<script src="./js/projects/lab-help-queue.js" defer></script>
+	<script src="./js/projects/teaching.js" defer></script>
 
 	<!-- main script -->
 	<script src="./js/script.js" defer></script>
 
+	<!-- anime.js -->
+	<script src="./js/anime/anime.min.js"></script>
 
 	<!-- lightbox -->
 	<script src="js/lightbox/lightbox.js"></script>
@@ -56,19 +59,22 @@
 		<a href="https://www.linkedin.com/in/isaacsheets1/" class="top-link" target="_blank">LinkedIn</a>
 	</section>
 
-	<section id="about" role="complementary">
-		<img id="portrait" src='./img/profile.JPG' alt="portrait of me!">
-		<div id="about-text">
-			<h2>ABOUT</h2>
-			<p id="welcome">
-				I'm Isaac Sheets and my work is centered on mobile application development, front end
-				web development, and user experience + interface design. I graduated from the University of Colorado
-				Boulder with a BS Technology, Arts, and Media Degree in December 2019. Currently, I am teaching an
-				Advanced Mobile Application course at CU and working as an internationalization software engineer for
-				Lingoport, Inc.
-			</p>
-		</div>
-	</section>
+	<div id="about" role="complementary">
+		<section id="about-content">
+			<img id="portrait" src='./img/profile.JPG' alt="portrait of me!">
+			<div id="about-text">
+				<h2>ABOUT</h2>
+				<p id="welcome">
+					I'm Isaac Sheets and my work is centered on mobile application development, front end
+					web development, and user experience + interface design. I graduated from the University of Colorado
+					Boulder with a BS Technology, Arts, and Media Degree in December 2019. Currently, I am teaching an
+					Advanced Mobile Application course at CU and working as an internationalization software engineer
+					for
+					Lingoport, Inc.
+				</p>
+			</div>
+		</section>
+	</div>
 
 	<section id="projects" role="main">
 		<h2 id="project-list-title">WORK</h2>
@@ -77,6 +83,11 @@
 				<a class='thumbnail-title' href="#complete-a-tweet-2000">COMPLETE-A-TWEET 2000</a>
 				<p class='thumbnail-description'>A web app that gamifies Twitter by transforming the user’s timeline
 					into a series of word games.</p>
+			</li>
+			<li id='teaching' class='project-thumb'>
+				<a class='thumbnail-title' href="#lab-help-queue">MOBILE APP DEV CURRICULUM</a>
+				<p class='thumbnail-description'>Lecture notes and demo applications for the Advanced Mobile Application
+					Development course at CU Boulder (Spring 2020).</p>
 			</li>
 			<li id='lab-help-queue' class='project-thumb'>
 				<a class='thumbnail-title' href="#lab-help-queue">LAB HELP QUEUE</a>

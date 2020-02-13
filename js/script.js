@@ -1,9 +1,43 @@
+// Create a timeline with default parameters
+var introTL = anime.timeline({
+    easing: 'easeInOutCubic'
+});
+
 window.addEventListener('DOMContentLoaded', (event) => {
     let projectThumbs = document.getElementsByClassName('project-thumb');
 
     for (let thumb of projectThumbs) {
         thumb.addEventListener('click', openProjectContent);
     }
+
+    const linkEls = document.querySelectorAll(".top-link");
+    const projectEls = document.querySelectorAll('.project-thumb')
+
+    introTL.add({
+        targets: linkEls,
+        translateX: ['100%', '0%'],
+        duration: 500,
+        delay: anime.stagger(100)
+    }).add ({
+        targets: '#about',
+        scaleX: [0, 1],
+        duration: 400
+    }, '-=300').add ({
+        targets: '#about-content',
+        translateY: ['-100%', '0%'],
+        duration: 400
+    }).add({
+        targets: '#projects',
+        scaleX: [0, 1],
+        scaleY: [0, 1],
+        duration: 1000
+    }, '-=400').add({
+        targets: projectEls,
+        duration: 50,
+        scaleX: [0, 1],
+        scaleY: [0, 1],
+        delay: anime.stagger(50)
+    }, '-=200');
 });
 
 //opens lightbox with content for requested project
@@ -25,7 +59,7 @@ var openProjectContent = (e) => {
         liElement = e.srcElement;
     }
 
-    
+
 
     let projectLink = liElement.getElementsByClassName('thumbnail-title')[0];
 
@@ -54,6 +88,9 @@ var openProjectContent = (e) => {
         case "lab-help-queue":
             contentToRender = labHelpQueueContent;
             break;
+        case "teaching":
+            contentToRender = teachingContent;
+            break;
         default:
             console.error("Unknown project selected.")
             break;
@@ -64,7 +101,7 @@ var openProjectContent = (e) => {
         SimpleLightbox.open({
             content: contentToRender,
             elementClass: 'slbContentEl',
-            beforeClose: () => {returnFocus(projectLink)}
+            beforeClose: () => { returnFocus(projectLink) }
         });
 
         //lightbox accesibility considerations (trapping and transferring focus)
@@ -91,7 +128,7 @@ var returnFocus = (prevActive) => {
 //used to trap focus to light box when open
 var trapFocus = (element, namespace) => {
     var focusableEls = element.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])'),
-    firstFocusableEl = focusableEls[0];
+        firstFocusableEl = focusableEls[0];
     lastFocusableEl = focusableEls[focusableEls.length - 1];
     KEYCODE_TAB = 9;
 
