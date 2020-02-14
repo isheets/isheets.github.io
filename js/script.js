@@ -8,7 +8,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let projectThumbs = document.getElementsByClassName('project-thumb');
 
     for (var thumb of projectThumbs) {
-        thumb.addEventListener('click', function(e){openProjectContent(e, thumb.id)});
+        //need to bind the thumb id to avoid it always opening the last project id
+        let uniqueOpenProject = openProjectContent.bind(null, thumb.id)
+        thumb.addEventListener('click', uniqueOpenProject);
     }
 
     const linkEls = document.querySelectorAll(".top-link");
@@ -41,30 +43,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 //opens lightbox with content for requested project
-var openProjectContent = (e, projectClicked) => {
+var openProjectContent = (projectClicked, e) => {
     e.preventDefault();
-    //console.log(projectClicked);
-
-    // alert(e.target.localName)
-    //determine which project was clicked on
-    // let projectClicked = null;
-    // let liElement = null;
-    // if (e.target.localName !== "li") {
-    //     for (let parent of e.path) {
-    //         alert(parent)
-    //         if (parent.localName === "li") {
-    //             projectClicked = parent.id;
-    //             liElement = parent;
-    //         }
-    //     }
-    // }
-    // else {
-    //     projectClicked = e.srcElement.id;
-    //     liElement = e.srcElement;
-    // }
 
     let liElement = document.querySelectorAll('#' + projectClicked)[0];
-    //alert("project clicked: " + projectClicked)
 
     let projectLink = liElement.getElementsByClassName('thumbnail-title')[0];
 
