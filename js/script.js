@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 var openProjectContent = (e) => {
     e.preventDefault();
     console.log(e);
-    alert(e.target.innerText)
+    alert(e.target.localName)
     //determine which project was clicked on
     let projectClicked = null;
     let liElement = null;
