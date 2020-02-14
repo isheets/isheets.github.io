@@ -42,7 +42,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 //opens lightbox with content for requested project
 var openProjectContent = (e) => {
     e.preventDefault();
-    alert('project clicked')
+    alert(e.srcElement.id)
     //determine which project was clicked on
     let projectClicked = null;
     let liElement = null;
@@ -59,7 +59,7 @@ var openProjectContent = (e) => {
         liElement = e.srcElement;
     }
 
-    alert(projectClicked)
+    alert("project clicked: " + projectClicked)
 
     let projectLink = liElement.getElementsByClassName('thumbnail-title')[0];
 
