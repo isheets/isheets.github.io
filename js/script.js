@@ -3,11 +3,12 @@ var introTL = anime.timeline({
     easing: 'easeInOutCubic'
 });
 
+
 window.addEventListener('DOMContentLoaded', (event) => {
     let projectThumbs = document.getElementsByClassName('project-thumb');
 
-    for (let thumb of projectThumbs) {
-        thumb.addEventListener('click', openProjectContent);
+    for (var thumb of projectThumbs) {
+        thumb.addEventListener('click', function(e){openProjectContent(e, thumb.id)});
     }
 
     const linkEls = document.querySelectorAll(".top-link");
@@ -40,27 +41,30 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 //opens lightbox with content for requested project
-var openProjectContent = (e) => {
+var openProjectContent = (e, projectClicked) => {
     e.preventDefault();
-    console.log(e);
-    alert(e.target.localName)
-    //determine which project was clicked on
-    let projectClicked = null;
-    let liElement = null;
-    if (e.target.localName !== "li") {
-        for (let parent of e.path) {
-            if (parent.localName === "li") {
-                projectClicked = parent.id;
-                liElement = parent;
-            }
-        }
-    }
-    else {
-        projectClicked = e.srcElement.id;
-        liElement = e.srcElement;
-    }
+    //console.log(projectClicked);
 
-    alert("project clicked: " + projectClicked)
+    // alert(e.target.localName)
+    //determine which project was clicked on
+    // let projectClicked = null;
+    // let liElement = null;
+    // if (e.target.localName !== "li") {
+    //     for (let parent of e.path) {
+    //         alert(parent)
+    //         if (parent.localName === "li") {
+    //             projectClicked = parent.id;
+    //             liElement = parent;
+    //         }
+    //     }
+    // }
+    // else {
+    //     projectClicked = e.srcElement.id;
+    //     liElement = e.srcElement;
+    // }
+
+    let liElement = document.querySelectorAll('#' + projectClicked)[0];
+    //alert("project clicked: " + projectClicked)
 
     let projectLink = liElement.getElementsByClassName('thumbnail-title')[0];
 
