@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:500|Teko:500|Overpass+Mono:600');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:wght@400;700|Teko:500|Overpass+Mono:600');
 
 /*css reset*/
 *,
@@ -181,10 +181,14 @@ h4 {
 }
 
 p {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	color: #212628;
-	line-height: 150%;
+	line-height: 130%;
 	margin-bottom: 5px;
+}
+
+.bold {
+	font-weight: 700;
 }
 
 ul {
@@ -246,6 +250,10 @@ a {
 	background-color: #FFF9B1;
 	padding:5px;
 	transition: color .4s ease-out, background-color .4s ease-out;
+}
+
+.slim {
+	padding:0px;
 }
 
 /* mouse over link */
