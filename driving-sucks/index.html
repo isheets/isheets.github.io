@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Driving Sucks</title>
+	<link rel="icon" 
+	type="image/png" 
+	href="img/favicon.png" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+	<!-- migrate this for line animation -->
+	<script src="js/svg.js"></script>
+	<script src="js/draw.js"></script>
+	<script src="js/keyframes.js"></script>
+
+	<!-- main script -->
+	<script src="js/script.js" defer></script>
+
+	<!-- scroll magic / tween max -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+	<script data-cfasync="false" src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+	<script data-cfasync="false" src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+	<script data-cfasync="false" src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+	<!-- map stuff -->
+	<!--  Include leaflet javascript and css -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" crossorigin="">
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js" crossorigin=""></script>
+	<!--  Include r360.js -->
+	<script src="https://releases.route360.net/r360-js/latest.js"></script>
+	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBt5DIAiEmN32BQI9Vr4WUggnl0j6AolB8&libraries=places"></script>
+
+</head>
+
+<body>
+	<header id="head">
+		<h1 class="red" id="title">DRIVING SUCKS!</h1>
+		<div id="menu">
+			<div id="read">
+				<h2 class="blue tagline">a disruptive argument that shines light on the downsides of driving.</h2>
+			</div>
+			<div id="use">
+				<h2 class="blue tagline">a tool to find out how far you can go without a car.</h2>
+			</div>
+		</div>
+	</header>
+	<section id="theBad">
+		<div id="trigger1">
+		</div>
+		<div id="bg1" class="pin">
+			<div id="carBG" class="pin"></div>
+		</div>
+
+
+
+		<h2 class="badText">you know when you're driving and all you can think is</h2>
+		<h2 class="badText blue right lowPad">"damn this sucks."</h2>
+		<h2 class="badText">well you're not alone! everybody hates driving and now we know why!</h2>
+		<h2 class="badText right red">IT SUCKS.</h2>
+		
+		<h2 class="badText">but why specifically?</h2>
+		<p class="badText">well there's a variety of different reasons</p>
+		
+		<h2 class="badText right red">traffic</h2>
+		<p class="badText">According to the US Census Bureau, the average American spends 26 minutes communting in a car per day.</p>
+		<p class="badText">Annually, that's about <span class="blue">NINE</span> whole days spent behind the wheel, which is certainly not ideal.</p>
+		
+		<h2 class="badText right red">environment</h2>
+		<p class="badText">Everybody knows that cars release the greenhouse gas carbon dioxide, which is a significant contributor to climate change.</p>
+		<p class="badText">But the amount is somewhat startling: 10,000 pounds per year on average. </p>
+		<p class="badText">Aside from carbon dioxide, cars also release carbon monoxide, sulphur oxide, nitrogen oxide, and lead into the atmosphere.</p>
+		<p class="badText">All of these compounds have their own negative health implications such as breathing and heart problems as well as increased risk of cancer and birth defects.</p>
+		<p class="badText">Once these dangerous chemicals are released, it's extremely difficult to remove them.</p> 
+		<p class="badText">It doesn't just affect the driver, <span class="blue">it affects us all</span>.</p>
+		
+		<h2 class="badText right red">health</h2>
+		<p class="badText">Consider ditching your car if you experience any of the following symptoms that are associated with commuting in a car</p>
+		<p class="badText narrow"><span class="list"> high blood sugar </span> <span class="list right"> high cholesterol</span><span class="list"> depression</span> <span class=" list right"> anxiety</span> <span class="list"> blood pressure spikes</span> <span class=" right list"> poor sleep</span> <span class=" list"> decreased cardiovascular fitness</span> <span class="list right"> back pain</span> <span class="list blue"> or sudden death</span></p>
+
+		<h2 class="badText right red">money</h2>
+		<p class="badText">First you have to actually buy a car. Depending on your preferences, you could spend as little as a couple thousand dollars for a used car (not too bad, huh?) or you could go the new car route and spend an average of <span class="blue">$36,000</span>!</p>
+		<p class="badText">Even after you buy the car, you're looking at about <span class="blue">$9,000</span> per year to own it. This includes insurance, gas, maintenance, as well as some other costs. Not good.</p>
+
+		<h2 class="badText right red">positives</h2>
+		<p class="badText">Sure, there are <i>some</i> positives to driving. Cars are a good option if you live in a rural area or if you absolutely need to go long distances. 
+		<p class="badText">Additionally, you can have passengers in your car which reduces traffic for everyone on the road and lowers the environmental harm done by each person.</p>
+		<p class="badText">Finally, you can also transport (or store) a ton of cargo in a car which can come in handy if you're always on the run</p>
+
+	</section>
+
+	<section id="theGood">
+		<div id="trigger2"></div>
+		<div id="bg2">
+			<div id="sunnyBG"></div>
+		</div>
+		<h2 class="goodText">if driving is so bad, then what's the alternative?</h2>
+
+		<h2 class="goodText right green">good: public transport</h2>
+		<p class="goodText">Taking advantage of the public transportation options available in your area, such as busses, subways, or trains, is an easy way to drive less.</p>
+		<p class="goodText">Once you're going, public transport can often get you where you need to go either just as quick or even quicker than driving.</p>
+		<p class="goodText">While these public transportation options are great, they still produce some harmful emissions and it can be a big inconvienence when service delays inevitably occur.</p>
+
+		<h2 class="goodText right green">better: walk or run</h2>
+		<p class="goodText"> This is perhaps the easiest way to drive less. While walking can take a while depending on how far you need to go, you don't need any additional equipment to walk and you can easily adapt to any changes in the weather</p>
+		<p class="goodText">Additionally, you don't need to worry about parking or traffic!</p>
+		<p class="goodText">And if you need to get there fast, just start running!</p>
+
+		<h2 class="goodText right green">best: bike</h2>
+		<p class="goodText">Riding a bike is the most efficient method of human powered transportation. Cities often have dedicated bike lanes or bike paths that can get you anywhere you need to go quickly and safely. While you do need to buy and maintain the bike, it is merely a fraction of the cost of buying and maintaining a car.</p>
+
+		<h2 class="goodText right green">making the switch</h2>
+		<p class="goodText">All of the alternatives mentioned above will entail making some sort of lifestlye adjustment if your main method of transportation is a car.</p>
+		<p class="goodText green">But it can be done!</p>
+		<p class="goodText">While leaving the car behind on your commute may be difficult at first, using alternative transportation methods gets easier the more you use it.</p>
+		<p class="goodText">Who knows you may find it easier than car for some trips!</p>
+
+		<h2 class="goodText right green">the bottom line</h2>
+		<p class="goodText">Overall, any steps you can take to lower your time behind the wheel will result in a happier, healthier lifestyle that is good for you and good for the environment!</p>
+
+
+	</section>
+	
+	
+	<section id="form">
+		<div id="formContent">
+			<div id="formTitle">
+				<h2 id="formHead">Want to see how far you can get without a car?</h2>
+				<h2 id="formTag">Enter a starting address and choose your method of alternative transport below to find out!</h2>
+			</div>
+			<form id="userInput">
+				<div id="addField" class="formElement">
+					<input type="text" name="address" id="address" placeholder="Address" required>
+				</div>
+
+				<select class="formElement" id="transitSelect">
+					<option value="walk">Walk</option>
+					<option value="bike">Bike</option>
+					<option value="transit">Public Transit</option>
+				</select>
+
+				<input class="formElement" type="button" value="submit" id="show">
+			</form>
+			
+			<div id="map">
+				
+			</div>
+			<img src='img/legend.svg' id="legend">
+			<div id="polyLine1" class="polyLine"></div>
+		</div>
+	</section>
+</body>
+
+<!-- sources:
+--http://www.ecoshuttle.com/blog/2017/01/13/the-environmental-impact-of-driving-your-own-vehicle/
+--https://bestlifeonline.com/traffic-commute-times/
+--https://www.nationalgeographic.com/environment/green-guide/buying-guides/car/environmental-impact/
+--https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4049576/
+--https://www.usatoday.com/story/news/nation/2013/04/16/aaa-car-ownership-costs/2070397/
+--http://time.com/9912/10-things-your-commute-does-to-your-body/
+-->
+
+</html>

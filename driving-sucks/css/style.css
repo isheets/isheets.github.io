@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans:400,700');
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+
+} 
+
+/*
+green: #00A676
+dust: #C0BCB5
+blue: #B1DDF1
+red: #BF4342
+old lavender: #6D6875
+*/
+
+body {
+
+}
+
+
+.badText {
+	color: white;
+
+}
+
+.goodText {
+	color: white;
+}
+.green {
+	color: #00A676;
+}
+
+.dust {
+	color: #C0BCB5;
+}
+
+.blue {
+	color: #00CAE5;
+}
+
+.red {
+	color: #9B1D20;
+}
+
+.grey {
+	color: #6D6875;
+}
+
+#head {
+	background-color: #9E9A95;
+}
+
+#title {
+	position: relative;
+}
+
+#tagline {
+	position: relative;
+}
+
+h1 {
+	text-align: center;
+	margin: auto;
+	display: block;
+	padding-top: 15%;
+	font-family: 'Fredoka One', sans-serif;
+	font-size: 250%;
+	z-index: 1;
+}
+
+#menu {
+	position: relative;
+	margin-top: 15%;
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+.tagline {
+	position: relative;
+	text-align: center;
+	margin: auto;
+	display: block;
+	font-family: 'Fredoka One', sans-serif;
+	font-size: 160%;
+	width: 80%;
+	letter-spacing: 1.5px;
+	cursor: pointer;
+	border-radius: 12px;
+	padding: 10px;
+	border: 2px dashed #6D6875;
+	z-index: 1;
+	background-color: #9E9A95;
+}
+
+.tagline:hover {
+	box-shadow: 0px 0px 5px 3px #6D6875;
+	border: none;
+}
+h2.badText{
+	letter-spacing: 1.5px;
+	margin: auto;
+	width: 45%;
+	display: block;
+	z-index: 1;
+	padding-top: 100px;
+	font-family: 'Fredoka One', sans-serif;
+	font-size: 180%;
+	position: relative;
+}
+h2.goodText{
+	letter-spacing: 1.5px;
+	margin: auto;
+	width: 45%;
+	display: block;
+	z-index: 1;
+	padding-top: 100px;
+	font-family: 'Fredoka One', sans-serif;
+	font-size: 180%;
+	position: relative;
+}
+
+p {
+	position: relative;
+	margin: auto;
+	width: 45%;
+	display: block;
+	z-index: 0;
+	padding-top: 40px;
+	font-size: 115%;
+	font-family: 'Open Sans', sans-serif;
+}
+.narrow {
+	width: 30%;
+
+}
+.list {
+	letter-spacing: 1px;
+	display: block;
+	width: auto;
+	font-family: 'Fredoka One', sans-serif;
+}
+
+h2.goodText.lowPad {
+	padding-top: 10px;
+}
+
+
+
+.right {
+	text-align: right;
+}
+
+#bg1 {
+	z-index: 2;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	
+}
+
+#carBG {
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url('../img/car.svg') repeat-x left bottom, 
+	url('../img/cloud1.svg') repeat-x top right, 
+	url('../img/cloud.svg') repeat-x top left, 
+	url('../img/city.svg') no-repeat bottom left, 
+	url('../img/city1.svg') no-repeat bottom right;
+	background-size: 5%, 30%, 25%, 22%, 22%;
+	animation: animatedBackground 40s linear infinite;
+	z-index: 2;
+}
+
+
+#bg2 {
+	z-index: 2;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+}
+
+#theBad {
+	height: 4400px;
+	padding-bottom: 500px;
+	background-color: #6D6875;
+	overflow-x: hidden;
+}
+
+#theGood {
+	position: relative;
+	height: 3100px;
+	background-color: #00CAE5;
+	z-index: 11;
+	overflow-x: hidden;
+}
+
+#sunnyBG {
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: 
+	url('../img/happyCloud.svg') repeat-x top left,
+	url('../img/sun.svg') no-repeat top right,
+	url('../img/happyCloud.svg') repeat-x top right,
+	url('../img/hills.svg') no-repeat bottom center;
+	background-size: 40%, 10%, 20%, 100%;
+	animation: animatedHappyBackground 40s linear infinite;
+	z-index: 10;
+}
+
+#big {
+	letter-spacing: 1.5px;
+	margin: auto;
+	width: 45%;
+	display: block;
+	z-index: 1;
+	padding-top: 300px;
+	font-family: 'Fredoka One', sans-serif;
+	font-size: 250%;
+	position: relative;
+	text-align: center;
+}
+
+#last {
+	height: 1400px;
+}
+
+#form {
+	padding-top: 40px;	
+	width: 100%;
+	position: relative;
+	background-color: #9E9A95;
+	z-index: 100;
+}
+
+#formContent {
+	width: 60%;
+	height: 100%;
+	margin: auto;
+}
+
+#map {
+	width: 100%;
+	height: 55%;
+	display: inline-block;
+	position: relative;
+	border-radius: 12px;
+	margin-top: 25px;
+	box-shadow: 0px 2px 5px 3px #403D44;
+	z-index: 100;
+}
+
+/*form styling*/
+#formTitle {
+	box-shadow: 0px 2px 5px 3px #403D44;
+	background-color: rgba(158, 154, 149, 1);
+	border-radius: 12px;
+}
+
+#formHead {
+	text-align: center;
+	margin: auto;
+	display: block;
+	font-family: 'Fredoka One', sans-serif;
+	font-size: 210%;
+	letter-spacing: 1.5px;
+	color: #00CAE5;
+	padding-top: 10px;
+}
+#formTag {
+	text-align: center;
+	margin: auto;
+	display: block;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	font-family: 'Fredoka One', sans-serif;
+	font-size: 150%;
+	letter-spacing: 1.5px;
+	color: white;
+}
+
+/*flexbox for form*/
+#userInput {
+	background-color: #6D6875;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 90%;
+	border-radius: 12px;
+	height: 70px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	margin: auto;
+	margin-top: 25px;
+	box-shadow: 0px 2px 5px 3px #403D44;
+}
+
+.formElement {
+}
+
+#address {
+	padding: 5px;
+	display: block;
+	font-size: 120%;
+	width: 400px;
+	border-radius: 5px;
+	border: none;
+}
+
+#show {
+	background-color: #00A676;
+	border: none;
+	color: white;
+	padding: 10px 0px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 18px;
+	cursor: pointer;
+	width: 90px;
+	border-radius: 5px;
+	font-family: Fredoka One, sans-serif;
+	letter-spacing: 1px;
+}
+#show:focus {
+	outline: none;
+}
+
+#show:active { /*Clicked and held*/
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.5);
+}
+
+
+#transitSelect {
+	font-size: 120%;
+	width: 150px;
+	height: 33px;
+}
+
+#legend {
+	width: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 1000;
+	margin-top: 4px;
+}
+
+
+.circle { 
+	border-radius: 50%;
+	border: 2px black;
+	position: absolute;
+	z-index: 0;
+	animation: scaleIn 1.5s linear forwards;
+	opacity: 0;
+}
+
+.polyLine {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	top: 0;
+	right: 0;
+}
+
+@keyframes scaleIn {
+  0% {
+  	transform: scale(.5, .5);
+  	opacity: 0;
+  }
+  30% {
+  	opacity: 1;
+  	transform: scale(1, 1);
+  }
+  80% {
+    transform: scale(2.5, 2.5);
+    opacity: .4;
+  }
+  100% {
+    transform: scale(3, 3);
+    opacity: 0;
+  }
+}
+
+@keyframes animatedBackground {
+	from { background-position: 
+		left bottom, 
+		right top, 
+		left top, 
+		left bottom, 
+		right bottom; }
+		to { background-position: 
+			center bottom, 
+			left top, 
+			center top, 
+			left bottom, 
+			right bottom; }
+		}
+
+		@keyframes animatedHappyBackground {
+			from { background-position: 
+				top left, 
+				top right,
+				top right,
+				bottom right; }
+				to { background-position: 
+					top right, 
+					top right,
+					top center,
+					bottom right; }
+				}
