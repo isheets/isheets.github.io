@@ -25,7 +25,7 @@ let completeATweetContent = `
     </div>
     <div class="github-links">
         <div id="app-links">
-            <a href="https://isheets.github.io/portfolio/complete-a-tweet-2000/" target="_blank">Check
+            <a href="https://isheets.github.io/complete-a-tweet-2000/" target="_blank">Check
                 it out!</a>
         </div>
     </div>
